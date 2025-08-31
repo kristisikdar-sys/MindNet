@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import ChatWindow from './components/ChatWindow.jsx'
 import ChatInput from './components/ChatInput.jsx'
+import Login from './pages/Login.jsx'
+import Signup from './pages/Signup.jsx'
 
-function App() {
+function ChatPage() {
   const [messages, setMessages] = useState([
     { role: 'assistant', content: 'Hello, I’m MindNet AI 👋' },
   ])
@@ -22,6 +25,17 @@ function App() {
         <ChatInput onSend={handleSend} />
       </main>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/chat" element={<ChatPage />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
+    </Routes>
   )
 }
 
