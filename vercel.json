@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://mindnet-backend.onrender.com/api/$1"
+      "dest": "https://mindnet-backend.herokuapp.com/api/$1"
     }
   ]
 }
