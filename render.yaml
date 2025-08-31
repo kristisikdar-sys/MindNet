@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mindnet-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: AI_ENGINE_URL
+        value: https://mindnet-ai-engine.up.railway.app
+      - key: MONGODB_URI
+        value: YOUR_MONGODB_ATLAS_URI
+
