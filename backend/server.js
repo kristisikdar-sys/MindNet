@@ -10,6 +10,11 @@ app.use(express.json())
 // Routes
 app.use('/api/chat', chatRoutes)
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'MindNet AI backend', docs: '/health, /api/chat' })
+})
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' })
