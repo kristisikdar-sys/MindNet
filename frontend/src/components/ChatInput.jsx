@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 export default function ChatInput({ onSend }) {
   const [text, setText] = useState('')
+  const isEmpty = text.trim().length === 0
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -19,11 +20,14 @@ export default function ChatInput({ onSend }) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Type your message..."
-          className="flex-1 rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-label="Message"
+          autoComplete="off"
+          className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           type="submit"
-          className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          disabled={isEmpty}
+          className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Send
         </button>
