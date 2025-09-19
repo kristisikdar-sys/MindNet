@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import ChatWindow from './components/ChatWindow.jsx'
 import ChatInput from './components/ChatInput.jsx'
@@ -45,7 +44,11 @@ function ChatPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-gray-900">
-      <Navbar />
+      <header className="w-full bg-blue-600">
+        <div className="mx-auto max-w-3xl px-4 py-4">
+          <h1 className="text-center text-white text-xl sm:text-2xl font-semibold tracking-tight">MindNet AI</h1>
+        </div>
+      </header>
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col border-x bg-white">
         <ChatWindow messages={messages} isLoading={isLoading} />
         <ChatInput onSend={handleSend} />
