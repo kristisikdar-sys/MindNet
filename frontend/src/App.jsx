@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
 import ChatWindow from './components/ChatWindow.jsx'
 import ChatInput from './components/ChatInput.jsx'
 import Login from './pages/Login.jsx'
@@ -18,12 +19,13 @@ function ChatPage() {
   }
 
   return (
-    <div className="flex h-full flex-col bg-white text-gray-900">
+    <div className="flex min-h-screen flex-col bg-white text-gray-900">
       <Navbar />
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col border-x bg-white">
         <ChatWindow messages={messages} />
         <ChatInput onSend={handleSend} />
       </main>
+      <Footer />
     </div>
   )
 }
