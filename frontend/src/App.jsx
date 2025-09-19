@@ -43,34 +43,38 @@ function ChatPage() {
   }
 
   return (
+    <>
+      <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col border-x bg-white">
+        <ChatWindow messages={messages} isLoading={isLoading} />
+        <ChatInput onSend={handleSend} />
+      </div>
+      {error && (
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 rounded-lg border border-red-200 bg-white px-3 py-2 text-sm text-red-600 shadow-md">
+          {error}
+        </div>
+      )}
+    </>
+  )
+}
+
+function App() {
+  return (
     <div className="flex min-h-screen flex-col bg-white text-gray-900">
       <header className="w-full bg-blue-600">
         <div className="mx-auto max-w-3xl px-4 py-4">
           <h1 className="text-center text-white text-xl sm:text-2xl font-semibold tracking-tight">MindNet AI</h1>
         </div>
       </header>
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col border-x bg-white">
-        <ChatWindow messages={messages} isLoading={isLoading} />
-        <ChatInput onSend={handleSend} />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
       </main>
       <Footer />
-      {error && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 rounded-lg border border-red-200 bg-white px-3 py-2 text-sm text-red-600 shadow-md">
-          {error}
-        </div>
-      )}
     </div>
-  )
-}
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/chat" element={<ChatPage />} />
-      <Route path="*" element={<Navigate to="/login" replace />} />
-    </Routes>
   )
 }
 
