@@ -66,6 +66,20 @@ function App() {
         </div>
       </header>
       <main className="flex-1">
+        <section className="mx-auto w-full max-w-3xl border-x bg-white">
+          <div className="h-64 overflow-y-auto p-4 space-y-3 bg-gray-50">
+            <div className="flex justify-start">
+              <div className="max-w-[80%] rounded-2xl rounded-bl-sm border border-gray-200 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm">
+                Hello, how are you?
+              </div>
+            </div>
+            <div className="flex justify-end">
+              <div className="max-w-[80%] rounded-2xl rounded-br-sm bg-blue-600 px-4 py-2 text-sm text-white shadow-sm">
+                I feel stressed today.
+              </div>
+            </div>
+          </div>
+        </section>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
