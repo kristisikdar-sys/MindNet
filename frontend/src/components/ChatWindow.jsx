@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react'
 
-export default function ChatWindow({ messages }) {
+export default function ChatWindow({ messages, isLoading = false }) {
   const containerRef = useRef(null)
 
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
     container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' })
-  }, [messages])
+  }, [messages, isLoading])
 
   return (
     <div
@@ -21,19 +21,28 @@ export default function ChatWindow({ messages }) {
           Start the conversation with MindNet AI.
         </div>
       ) : (
-        messages.map((msg, idx) => (
-          <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div
-              className={`max-w-[80%] break-words rounded-2xl px-4 py-2 text-sm shadow-sm ${
-                msg.role === 'user'
-                  ? 'bg-blue-600 text-white rounded-br-sm'
-                  : 'bg-white text-gray-900 border border-gray-200 rounded-bl-sm'
-              }`}
-            >
-              {msg.content}
+        <>
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div
+                className={`max-w-[80%] break-words rounded-2xl px-4 py-2 text-sm shadow-sm ${
+                  msg.role === 'user'
+                    ? 'bg-blue-600 text-white rounded-br-sm'
+                    : 'bg-white text-gray-900 border border-gray-200 rounded-bl-sm'
+                }`}
+              >
+                {msg.content}
+              </div>
             </div>
-          </div>
-        ))
+          ))}
+          {isLoading && (
+            <div className="flex justify-start">
+              <div className="max-w-[80%] break-words rounded-2xl px-4 py-2 text-sm shadow-sm bg-white text-gray-600 border border-gray-200 rounded-bl-sm animate-pulse">
+                MindNet AI is thinking...
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   )
