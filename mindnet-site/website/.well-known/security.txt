@@ -1,0 +1,5 @@
+Contact: mailto:security@mindnet.ai
+Preferred-Languages: en
+Encryption: https://mindnet.ai/pgp.txt
+Acknowledgements: https://mindnet.ai/security
+Policy: https://mindnet.ai/policies/responsible-disclosure

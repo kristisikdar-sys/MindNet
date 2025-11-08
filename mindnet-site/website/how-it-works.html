@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindNet | How It Works</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a class="flex items-center gap-3 text-lg font-semibold tracking-wide" href="index.html">
+          <img src="assets/logo.svg" alt="MindNet logo" class="h-10 w-10" />
+          MindNet
+        </a>
+        <nav>
+          <ul class="flex flex-wrap items-center gap-6 text-sm uppercase tracking-wide text-slate-300">
+            <li><a class="hover:text-cyan-300 transition" href="how-it-works.html">How It Works</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="ethics.html">Ethics</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="demo.html">Demo</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pb-24">
+      <section class="bg-gradient-to-b from-slate-900/60 to-slate-950 py-20">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="text-sm uppercase tracking-[0.35em] text-cyan-300">Platform Overview</p>
+          <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">How MindNet Orchestrates Insight</h1>
+          <p class="mt-6 text-lg text-slate-300">
+            MindNet unifies data ingestion, neural modeling, and interpretability layers so you can trace every decision made by the system.
+            Explore each stage below.
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-5xl px-6 py-16">
+        <div class="space-y-12">
+          <div class="process-step">
+            <div>
+              <h2 class="process-heading">1. Ingest & Normalize</h2>
+              <p class="process-body">
+                Connect to streaming or batch sources with schema-aware adapters. Our normalization engine standardizes structures while preserving provenance metadata.
+              </p>
+            </div>
+            <span class="process-tag">Data Fabric</span>
+          </div>
+          <div class="process-step">
+            <div>
+              <h2 class="process-heading">2. Train Contextual Models</h2>
+              <p class="process-body">
+                Hybrid neural-graph models learn relationships and generate vector spaces optimized for explainability. Fine-tune with human feedback directly inside the platform.
+              </p>
+            </div>
+            <span class="process-tag">Model Core</span>
+          </div>
+          <div class="process-step">
+            <div>
+              <h2 class="process-heading">3. Generate Live Insights</h2>
+              <p class="process-body">
+                Stream embeddings into dashboards and APIs. Confidence bands, counterfactuals, and scenario planning are baked in for instant decision support.
+              </p>
+            </div>
+            <span class="process-tag">Insight Mesh</span>
+          </div>
+          <div class="process-step">
+            <div>
+              <h2 class="process-heading">4. Govern & Iterate</h2>
+              <p class="process-body">
+                Policy engines monitor ethics, bias, and drift across deployments. Automated prompts recommend retraining or human review when thresholds are crossed.
+              </p>
+            </div>
+            <span class="process-tag">Ops & Trust</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-900/40 py-16">
+        <div class="mx-auto max-w-5xl px-6">
+          <h2 class="text-2xl font-semibold text-white sm:text-3xl">Built for Integrators and Researchers</h2>
+          <div class="mt-10 grid gap-10 md:grid-cols-2">
+            <article class="card">
+              <h3 class="card-title">Developer Toolkit</h3>
+              <p class="card-body">
+                SDKs and API endpoints offer fine-grained control. Build custom triggers, pipelines, and visualization overlays without losing platform guardrails.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Research Playground</h3>
+              <p class="card-body">
+                Spin up sandboxes with experiment tracking and reproducibility baked in. Export notebooks or share live boards with collaborators.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MindNet Labs. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-cyan-300 transition" href="static/robots.txt">Robots</a>
+          <a class="hover:text-cyan-300 transition" href="static/sitemap.xml">Sitemap</a>
+          <a class="hover:text-cyan-300 transition" href=".well-known/security.txt">Security</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
