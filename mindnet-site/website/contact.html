@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindNet | Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a class="flex items-center gap-3 text-lg font-semibold tracking-wide" href="index.html">
+          <img src="assets/logo.svg" alt="MindNet logo" class="h-10 w-10" />
+          MindNet
+        </a>
+        <nav>
+          <ul class="flex flex-wrap items-center gap-6 text-sm uppercase tracking-wide text-slate-300">
+            <li><a class="hover:text-cyan-300 transition" href="how-it-works.html">How It Works</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="ethics.html">Ethics</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="demo.html">Demo</a></li>
+            <li><a class="hover:text-cyan-300 transition" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pb-24">
+      <section class="bg-slate-900/50 py-20">
+        <div class="mx-auto max-w-4xl px-6">
+          <p class="text-sm uppercase tracking-[0.35em] text-cyan-300">Let's Collaborate</p>
+          <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Talk with the MindNet Team</h1>
+          <p class="mt-6 text-lg text-slate-300">
+            Whether you're exploring a pilot, looking for a deep-dive, or curious about our research, we’d love to connect.
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-4xl px-6 py-16">
+        <div class="grid gap-12 lg:grid-cols-[1.2fr,1fr]">
+          <form class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 shadow-lg shadow-cyan-500/10">
+            <div class="grid gap-6">
+              <label class="form-label">
+                <span>Name</span>
+                <input class="form-input" type="text" name="name" placeholder="Ada Lovelace" required />
+              </label>
+              <label class="form-label">
+                <span>Email</span>
+                <input class="form-input" type="email" name="email" placeholder="ada@example.com" required />
+              </label>
+              <label class="form-label">
+                <span>Organization</span>
+                <input class="form-input" type="text" name="organization" placeholder="MindNet Labs" />
+              </label>
+              <label class="form-label">
+                <span>How can we help?</span>
+                <textarea class="form-input h-32 resize-none" name="message" placeholder="Tell us about your project..."></textarea>
+              </label>
+              <button class="btn-primary mt-2" type="submit">Submit</button>
+            </div>
+          </form>
+
+          <div class="space-y-8 text-sm text-slate-400">
+            <div>
+              <h2 class="text-xl font-semibold text-white">General Inquiries</h2>
+              <p class="mt-2">hello@mindnet.ai</p>
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold text-white">Enterprise Support</h2>
+              <p class="mt-2">support@mindnet.ai</p>
+              <p class="mt-1 text-slate-500">24/7 response for premium accounts</p>
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold text-white">Follow Us</h2>
+              <ul class="mt-2 space-y-2">
+                <li><a class="hover:text-cyan-300 transition" href="#">LinkedIn</a></li>
+                <li><a class="hover:text-cyan-300 transition" href="#">Research Blog</a></li>
+                <li><a class="hover:text-cyan-300 transition" href="#">Community Slack</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MindNet Labs. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-cyan-300 transition" href="static/robots.txt">Robots</a>
+          <a class="hover:text-cyan-300 transition" href="static/sitemap.xml">Sitemap</a>
+          <a class="hover:text-cyan-300 transition" href=".well-known/security.txt">Security</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
